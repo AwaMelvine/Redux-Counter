@@ -12,13 +12,13 @@ class Counter extends Component {
     // Stretch Problem: Implement an increment function that
     // increments after waiting for one second
   };
-  
+
   increment = () => {
     this.props.increment();
   };
 
   decrement = () => {
-    this.props.increment();
+    this.props.decrement();
   };
 
   render() {
