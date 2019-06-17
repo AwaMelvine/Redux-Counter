@@ -11,15 +11,15 @@ class Counter extends Component {
   incrementIfOdd = () => {
     // Stretch Problem: Implement an increment function that
     // only increments if the counter value is odd
-    setTimeout(() => {
-      this.props.incrementIfOdd();
-    }, 1000);
+    this.props.incrementIfOdd();
   };
 
   incrementAsync = () => {
     // Stretch Problem: Implement an increment function that
     // increments after waiting for one second
-    this.props.incrementAsync();
+    setTimeout(() => {
+      this.props.incrementAsync();
+    }, 1000);
   };
 
   increment = () => {
@@ -67,5 +67,5 @@ const mapStateToProps = state => {
 // makes itself known to this component.
 export default connect(
   mapStateToProps,
-  { increment, decrement, incrementAsync, incrementAsync }
+  { increment, decrement, incrementAsync, incrementIfOdd }
 )(Counter);
